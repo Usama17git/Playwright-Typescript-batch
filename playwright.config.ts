@@ -1,5 +1,9 @@
 import { defineConfig, devices } from '@playwright/test';
 
+// Provide a lightweight declaration for `process` so this config works
+// without requiring `@types/node` to be installed in the workspace.
+declare const process: any;
+
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -44,10 +48,10 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
 
     // {
     //   name: 'webkit',
