@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","607","PUT - Full update object","chromium","2026-07-01","passed","2026-07-01","","api/put-object.spec.ts","",""
+"","372","POST - Create object","chromium","2026-07-01","passed","2026-07-01","","api/post-object.spec.ts","",""
+"","602","PATCH - Partial update object","chromium","2026-07-01","passed","2026-07-01","","api/patch-object.spec.ts","",""
+"","1094","DELETE - Delete object","chromium","2026-07-01","passed","2026-07-01","","api/delete-object.spec.ts","",""
+"","308","GET - Retrieve objects","chromium","2026-07-01","passed","2026-07-01","","api/get-object.spec.ts","",""
