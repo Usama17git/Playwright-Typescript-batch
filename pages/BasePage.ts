@@ -36,4 +36,12 @@ export class BasePage {
   async waitForElement(selector: string): Promise<void> {
     await this.page.waitForSelector(selector, { state: 'visible' });
   }
+
+  /**
+   * Wait for a specific amount of time (ms)
+   * @param ms - Milliseconds to wait
+   */
+  async wait(ms: number): Promise<void> {
+    await this.page.waitForTimeout(ms);
+  }
 }

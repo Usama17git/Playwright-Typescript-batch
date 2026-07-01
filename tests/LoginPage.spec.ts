@@ -12,7 +12,7 @@ test.describe('Login Tests with Page Object Model', () => {
     await loginPage.navigateToLoginPage(LOGIN_URL);
   });
 
-  test('Should allow user to log in with valid credentials', async ({ page }) => {
+  test('Should allow user to log in with valid credentials', async () => {
     // Use POM methods
     await loginPage.login(USERNAME, PASSWORD);
     
@@ -25,9 +25,9 @@ test.describe('Login Tests with Page Object Model', () => {
     await loginPage.login('incorrectuser', PASSWORD);
     
     // Wait for error message to appear
-    await loginPage.page.waitForTimeout(2000);
-    
-    const errorVisible = await loginPage.page.locator('#error').isVisible();
+    await loginPage.wait(2000);
+
+    const errorVisible = await loginPage.isErrorMessageVisible();
     expect(errorVisible).toBeTruthy();
   });
 
@@ -35,9 +35,9 @@ test.describe('Login Tests with Page Object Model', () => {
     await loginPage.login(USERNAME, 'Password12345');
     
     // Wait for error message to appear
-    await loginPage.page.waitForTimeout(2000);
-    
-    const errorVisible = await loginPage.page.locator('#error').isVisible();
+    await loginPage.wait(2000);
+
+    const errorVisible = await loginPage.isErrorMessageVisible();
     expect(errorVisible).toBeTruthy();
   });
 
@@ -45,9 +45,9 @@ test.describe('Login Tests with Page Object Model', () => {
     await loginPage.clickSubmit();
     
     // Wait for error message to appear
-    await loginPage.page.waitForTimeout(2000);
-    
-    const errorVisible = await loginPage.page.locator('#error').isVisible();
+    await loginPage.wait(2000);
+
+    const errorVisible = await loginPage.isErrorMessageVisible();
     expect(errorVisible).toBeTruthy();
   });
 

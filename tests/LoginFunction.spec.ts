@@ -32,4 +32,3 @@ async function verifySuccessfulLogin(page: Page, username: string) {
   await expect(page.getByRole('heading', { name: 'Logged In Successfully' })).toBeVisible();
   await expect(page.locator('strong')).toContainText(`Congratulations ${username}. You successfully logged in!`);
 }
-

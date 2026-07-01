@@ -84,6 +84,13 @@ export class LoginPage extends BasePage {
   }
 
   /**
+   * Check if error message is visible
+   */
+  async isErrorMessageVisible(): Promise<boolean> {
+    return await this.page.locator(this.errorMessage).isVisible();
+  }
+
+  /**
    * Click logout link
    */
   async logout(): Promise<void> {
