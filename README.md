@@ -12,6 +12,12 @@ npm run test
 npm run test:headed
 ```
 
+## Run only API tests
+
+```powershell
+npm run test:api
+```
+
 ## Run tests and open Allure report automatically
 
 ```powershell
